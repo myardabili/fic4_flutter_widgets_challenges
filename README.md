@@ -1,16 +1,7 @@
-# project_flutter_pertama
+# Flutter Intensive Club (FIC)
 
-A new Flutter project.
+FLutter Widgets
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
+![ss3](https://github.com/myusufardabili/fic4_flutter_widgets_challenges/assets/93905179/0225a754-98de-488d-ae4e-b83b096fc650)
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
