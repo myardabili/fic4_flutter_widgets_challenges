@@ -1,0 +1,56 @@
+import 'package:flutter/material.dart';
+
+class FICSliverWidget extends StatefulWidget {
+  const FICSliverWidget({super.key});
+
+  @override
+  State<FICSliverWidget> createState() => _FICSliverWidgetState();
+}
+
+class _FICSliverWidgetState extends State<FICSliverWidget> {
+  bool pinned = true;
+  bool snap = false;
+  bool floating = false;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+          title: const Text("FIC - Sliver"),
+          centerTitle: true,
+        ),
+        body: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              pinned: pinned,
+              snap: snap,
+              floating: floating,
+              expandedHeight: 180,
+              automaticallyImplyLeading: false,
+              flexibleSpace: const FlexibleSpaceBar(
+                centerTitle: true,
+                title: Text("Sliver App Bar"),
+                background: FlutterLogo(),
+              ),
+            ),
+            SliverList(
+              delegate: SliverChildBuilderDelegate(
+                (context, index) {
+                  return Container(
+                    color: index.isOdd ? Colors.white : Colors.blue[200],
+                    height: 100,
+                    child: Center(
+                      child: Text(
+                        "$index",
+                        textScaleFactor: 5,
+                      ),
+                    ),
+                  );
+                },
+                childCount: 20,
+              ),
+            ),
+          ],
+        ));
+  }
+}

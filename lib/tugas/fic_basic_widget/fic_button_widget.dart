@@ -1,31 +1,31 @@
 import 'package:flutter/material.dart';
 
-class ButtonWidget extends StatelessWidget {
-  const ButtonWidget({Key? key}) : super(key: key);
+class FICButtonWidget extends StatelessWidget {
+  const FICButtonWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text("FIC - Button"),
-        actions: const [],
+        centerTitle: true,
       ),
       body: Container(
-        padding: const EdgeInsets.all(10.0),
+        padding: const EdgeInsets.all(10),
         child: Column(
           children: [
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
+                backgroundColor: Colors.green,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(20),
                 ),
-                shadowColor: Colors.grey[20],
-                elevation: 5.0,
+                shadowColor: Colors.grey[5],
+                elevation: 5,
               ),
               child: Text(
-                "Add To Cart".toUpperCase(),
+                "add to cart".toUpperCase(),
                 style: const TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,

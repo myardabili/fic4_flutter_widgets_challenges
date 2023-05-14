@@ -1,4 +1,33 @@
+import 'package:project_flutter_pertama/fic_main_navigation.dart';
+import 'package:project_flutter_pertama/state_util.dart';
 import 'package:flutter/material.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_form/fic_dialog_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_form/fic_form_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_aspectratio_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_center_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_column_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_expanded_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_gridview_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_listview_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_padding_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_row_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_sizedbox_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_stack_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_layout/fic_wrap_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_widget/fic_button_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_widget/fic_circle_avatar.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_widget/fic_container_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_widget/fic_icon_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_widget/fic_image_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_widget/fic_scaffold_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_basic_widget/fic_text_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_navigation/fic_bottom_navbar.dart';
+import 'package:project_flutter_pertama/tugas/fic_navigation/fic_drawer_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_navigation/fic_navigation_pop.dart';
+import 'package:project_flutter_pertama/tugas/fic_navigation/fic_navigation_push.dart';
+import 'package:project_flutter_pertama/tugas/fic_navigation/fic_sliver_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_navigation/fic_tabbar_widget.dart';
+import 'package:project_flutter_pertama/tugas/fic_stateful_sample/fic_stateless_stateful.dart';
 import 'package:project_flutter_pertama/widget_lesson/basic_form/dialog_widget.dart';
 import 'package:project_flutter_pertama/widget_lesson/basic_form/form_widget.dart';
 import 'package:project_flutter_pertama/widget_lesson/basic_layout/aspectratio_widget.dart';
@@ -16,6 +45,7 @@ import 'package:project_flutter_pertama/widget_lesson/basic_widget/circle_avatar
 import 'package:project_flutter_pertama/widget_lesson/basic_widget/container_widget.dart';
 import 'package:project_flutter_pertama/widget_lesson/basic_widget/icon_widget.dart';
 import 'package:project_flutter_pertama/widget_lesson/basic_widget/image_widget.dart';
+import 'package:project_flutter_pertama/widget_lesson/basic_widget/scaffold_widget.dart';
 import 'package:project_flutter_pertama/widget_lesson/basic_widget/text_widget.dart';
 import 'package:project_flutter_pertama/widget_lesson/navigation/bottom_navbar.dart';
 import 'package:project_flutter_pertama/widget_lesson/navigation/drawer_widget.dart';
@@ -23,6 +53,7 @@ import 'package:project_flutter_pertama/widget_lesson/navigation/navigation_pop.
 import 'package:project_flutter_pertama/widget_lesson/navigation/navigation_push.dart';
 import 'package:project_flutter_pertama/widget_lesson/navigation/sliver_widget.dart';
 import 'package:project_flutter_pertama/widget_lesson/navigation/tabbar_widget.dart';
+import 'package:project_flutter_pertama/widget_lesson/stateful_sample/stateless_stateful_widget.dart';
 
 import 'widget_lesson/basic_layout/row_widget.dart';
 
@@ -37,10 +68,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      navigatorKey: Get.navigatorKey,
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SliverWidget(),
+      debugShowCheckedModeBanner: false,
+      home: FICMainNavigation(),
       // Scaffold(
       //   appBar: AppBar(
       //     title: const Text('Jago Flutter'),
